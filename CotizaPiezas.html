@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+
+<head>
+	<meta charset="utf-8">
+	<title>Venta De Piezas Y Repuestos</title>
+<link rel="stylesheet" type href="main.css">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/fontello.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<nav>
+	
+	  <ul>
+		
+		<li><a href="index.html">Inicio</a></li>
+		
+		<li><a href="Atencion.html">Atencion Al Cliente</a></li>
+
+		
+
+
+	  </ul>
+
+  </nav>
+
+	<h1>Piezas en venta</h1>
+
+
+	<div class="imagenes">
+
+  	<img src="imagenes/pantallas.jpg" style="width: 16%; height: 100%;" alt="">
+  		<h2>PANTALLAS</h2>
+
+  	<img src="imagenes/baterias.png" style="width: 8%; height: 100%;" alt="">
+  		<h2>BATERIAS</h2>
+
+  	<img src="imagenes/placas.png" style="width: 8%; height: 100%;" alt="">
+  		<h2>PLACAS</h2>
+
+  	<img src="imagenes/tapas.png" style="width: 8%; height: 100%;" alt="">
+  		<h2>TAPAS</h2>
+  	
+  	
+  </div>
+
+	<style>
+		
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		li:hover {
+			background-color: #f2f2f2;
+		}
+		li span {
+			margin-right: 10px;
+		}
+		
+		#total {
+			background-color: #f2f2f2;
+			border: 1px solid #ddd;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	
+	<ul>
+		<li>
+			<span>Pantalla</span>
+			<span>$1799.0</span>
+			<button onclick="agregarArticulo('Pantalla', 1799.0)">Agregar</button>
+		</li>
+		<li>
+			<span>Bateria</span>
+			<span>$1499.0</span>
+			<button onclick="agregarArticulo('Bateria', 1499.0)">Agregar</button>
+		</li>
+		<li>
+			<span>Placa</span>
+			<span>$1999.0</span>
+			<button onclick="agregarArticulo('Placa', 1999.0)">Agregar</button>
+		</li>
+		<li>
+			<span>Tapa</span>
+			<span>$799.0</span>
+			<button onclick="agregarArticulo('Tapa', 799.0)">Agregar</button>
+		</li>
+	</ul>
+	<div id="total">
+		<span>Total:</span>
+		<span id="totalPrecio">$0</span>
+	</div>
+	<script>
+		
+		var carrito = [];
+		var total = 0;
+
+		
+		function agregarArticulo(nombre, precio) {
+			
+			carrito.push({ nombre: nombre, precio: precio });
+			
+			total += precio;
+			
+			document.getElementById("totalPrecio").innerHTML = "$" + total;
+			
+			alert("Se agregó " + nombre + " al carrito.");
+		}
+	</script>
+</body>
+</html>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<footer>
+	
+	<div class="copy">
+				<p>Copyright &copy; 2023 JamayTech. Todos los derechos reservados.</p>
+	</div>
+	<div class="redes">
+		<a href="http://www.facebook.com" target="blank"><span class="icon-facebook"></span></a>
+		<a href="http://www.twitter.com"target="blank"><span class="icon-twitter"></span></a>
+		<a href="http://www.instagram.com" target="blank"><span class="icon-instagram"></span></a>
+		
+	</div>
+
+</footer>
